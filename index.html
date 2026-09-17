@@ -4,32 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elswhere Studios</title>
+<link rel="icon" href="/storyline/icon.png">
 <style>
-  :root { --paper:#FBFBF8; --ink:#1B1D21; --muted:#6C727B; --accent:#2B6BF3; }
+  :root {
+    --paper:  #FBFBF8;
+    --card:   #FFFFFF;
+    --ink:    #1B1D21;
+    --muted:  #6C727B;
+    --hair:   #E4E7EC;
+    --dot:    #D2D7DE;
+    --accent: #2B6BF3;
+    --shadow: rgba(16,18,22,.10);
+  }
   @media (prefers-color-scheme: dark) {
-    :root { --paper:#141518; --ink:#EDEEF0; --muted:#9AA1AB; --accent:#6E9BFF; }
+    :root {
+      --paper:  #141518;
+      --card:   #1B1D21;
+      --ink:    #EDEEF0;
+      --muted:  #9AA1AB;
+      --hair:   #2C2F35;
+      --dot:    #2A2E35;
+      --accent: #6E9BFF;
+      --shadow: rgba(0,0,0,.45);
+    }
   }
+  * { box-sizing: border-box; }
   body {
-    margin:0; min-height:100vh; background:var(--paper); color:var(--ink);
-    display:flex; align-items:center; justify-content:center;
-    font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink);
+    background-color: var(--paper);
+    background-image: radial-gradient(var(--dot) 1.4px, transparent 1.4px);
+    background-size: 26px 26px;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
   }
-  main { padding:2rem; max-width:32rem; }
-  h1 { font-size:1.6rem; letter-spacing:-.02em; margin:0 0 .25rem; }
-  p { color:var(--muted); margin:0 0 1.75rem; }
-  ul { list-style:none; padding:0; margin:0; }
-  li { margin:.5rem 0; }
-  a { color:var(--accent); }
+  main { max-width: 34rem; padding: 3rem 1.25rem; width: 100%; }
+  h1 { font-size: 1.7rem; letter-spacing: -.025em; margin: 0 0 .3rem; }
+  .tag { color: var(--muted); margin: 0 0 2.2rem; }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
+  a.card {
+    display: flex; align-items: center; gap: .9rem; text-decoration: none; color: var(--ink);
+    background: var(--card); border: 1px solid var(--hair); border-radius: 10px; padding: .9rem 1rem;
+  }
+  a.card:hover { border-color: var(--accent); }
+  a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  a.card img { width: 42px; height: 42px; border-radius: 22.37%; box-shadow: 0 1px 5px var(--shadow); flex: none; }
+  a.card strong { display: block; font-weight: 600; }
+  a.card .sub { color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 2.4rem; color: var(--muted); font-size: .9rem; }
+  footer a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
   <h1>Elswhere Studios</h1>
-  <p>Storyline Storyboarding for iPhone and iPad.</p>
+  <p class="tag">Small, careful apps.</p>
   <ul>
-    <li><a href="/storyline/support.html">Storyline &mdash; Support</a></li>
-    <li><a href="/storyline/privacy.html">Storyline &mdash; Privacy Policy</a></li>
+    <li>
+      <a class="card" href="/storyline/">
+        <img src="/storyline/icon.png" alt="">
+        <span><strong>Storyline</strong><span class="sub">Storyboarding for iPhone and iPad</span></span>
+      </a>
+    </li>
   </ul>
+  <footer><a href="mailto:sam@elswherestudios.com">sam@elswherestudios.com</a></footer>
 </main>
 </body>
 </html>

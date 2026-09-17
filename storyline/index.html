@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyline Storyboarding</title>
+<meta name="description" content="A storyboarding app for iPhone and iPad. Import drawings or photos, arrange them on dot-grid paper, and export a clean storyboard PDF.">
+<link rel="icon" href="icon.png">
+<style>
+  /* Palette taken from the app's own theme so the page and the app match. */
+  :root {
+    --paper:  #FBFBF8;
+    --card:   #FFFFFF;
+    --ink:    #1B1D21;
+    --muted:  #6C727B;
+    --hair:   #E4E7EC;
+    --dot:    #D2D7DE;
+    --accent: #2B6BF3;
+    --shadow: rgba(16,18,22,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:  #141518;
+      --card:   #1B1D21;
+      --ink:    #EDEEF0;
+      --muted:  #9AA1AB;
+      --hair:   #2C2F35;
+      --dot:    #2A2E35;
+      --accent: #6E9BFF;
+      --shadow: rgba(0,0,0,.45);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--paper);
+    /* The app's dot-grid paper, echoed at a calmer pitch. */
+    background-image: radial-gradient(var(--dot) 1.4px, transparent 1.4px);
+    background-size: 26px 26px;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+
+  header { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1.6rem; }
+  header img {
+    width: 88px; height: 88px; border-radius: 22.37%;
+    box-shadow: 0 2px 10px var(--shadow); flex: none;
+  }
+  h1 { font-size: clamp(1.7rem, 5.5vw, 2.3rem); letter-spacing: -.025em; margin: 0 0 .2rem; line-height: 1.1; }
+  .tag { color: var(--muted); margin: 0; font-size: 1.02rem; }
+
+  .lede { font-size: 1.12rem; margin: 0 0 2.2rem; max-width: 34rem; }
+
+  video {
+    width: 100%; display: block; border-radius: 12px;
+    border: 1px solid var(--hair); box-shadow: 0 4px 20px var(--shadow);
+    background: var(--card);
+  }
+  .cap { color: var(--muted); font-size: .88rem; margin: .7rem 0 2.6rem; }
+
+  h2 { font-size: 1.05rem; margin: 0 0 .9rem; letter-spacing: -.01em; }
+
+  .links { display: grid; gap: .7rem; margin: 0 0 2.6rem; padding: 0; list-style: none; }
+  .links a {
+    display: flex; align-items: baseline; gap: .7rem;
+    background: var(--card); border: 1px solid var(--hair); border-radius: 10px;
+    padding: .95rem 1.1rem; text-decoration: none; color: var(--ink);
+  }
+  .links a:hover { border-color: var(--accent); }
+  .links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .links strong { font-weight: 600; }
+  .links span { color: var(--muted); font-size: .92rem; }
+
+  ul.feat { padding-left: 1.15rem; margin: 0 0 2.6rem; }
+  ul.feat li { margin: .4rem 0; }
+
+  footer {
+    border-top: 1px solid var(--hair); padding-top: 1.4rem;
+    color: var(--muted); font-size: .9rem;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Storyline app icon">
+    <div>
+      <h1>Storyline</h1>
+      <p class="tag">Storyboarding for iPhone and iPad</p>
+    </div>
+  </header>
+
+  <p class="lede">Import drawings or photos, drag and drop them into order on dot-grid paper,
+  write a note under each frame, and export a storyboard PDF that carries your work and nothing
+  else.</p>
+
+  <video controls preload="metadata" poster="poster.jpg" playsinline>
+    <source src="demo.mp4" type="video/mp4">
+    Your browser can&rsquo;t play this video. <a href="demo.mp4">Download it instead.</a>
+  </video>
+  <p class="cap">Two and a half minutes: a board built from twelve frames, then exported.</p>
+
+  <h2>What it does</h2>
+  <ul class="feat">
+    <li>Takes any image &mdash; panels you drew, photographs, reference stills, scans</li>
+    <li>Keeps every frame in the shape it arrived in; mixed ratios on one board are normal</li>
+    <li>A note under each frame, with bold, italic and underline</li>
+    <li>Exports a landscape A4 contact sheet at 1, 4, 6 or 12 frames per page</li>
+    <li>Moves a whole board between devices as a single file</li>
+    <li>No account, no sign-in, and nothing stored anywhere but your device</li>
+  </ul>
+
+  <h2>Links</h2>
+  <ul class="links">
+    <li><a href="support.html"><strong>Support</strong> <span>Questions, bugs, requests</span></a></li>
+    <li><a href="privacy.html"><strong>Privacy Policy</strong> <span>What is collected, and what isn&rsquo;t</span></a></li>
+  </ul>
+
+  <footer>
+    Storyline Storyboarding is made by Elswhere Studios.
+    <a href="mailto:sam@elswherestudios.com">sam@elswherestudios.com</a>
+  </footer>
+</main>
+</body>
+</html>
