@@ -51,6 +51,16 @@
   a.card img { width: 42px; height: 42px; border-radius: 22.37%; box-shadow: 0 1px 5px var(--shadow); flex: none; }
   a.card strong { display: block; font-weight: 600; }
   a.card .sub { color: var(--muted); font-size: .9rem; }
+  .card.soon {
+    display: flex; align-items: center; gap: .9rem; color: var(--muted);
+    border: 1px dashed var(--hair); border-radius: 10px; padding: .9rem 1rem;
+  }
+  .card.soon .ph {
+    width: 42px; height: 42px; border-radius: 22.37%; flex: none;
+    border: 1px dashed var(--dot); display: grid; place-items: center; font-size: 1.3rem;
+  }
+  .card.soon strong { display: block; font-weight: 600; }
+  .card.soon .sub { font-size: .9rem; }
   footer { margin-top: 2.4rem; color: var(--muted); font-size: .9rem; }
   footer a { color: var(--accent); }
 </style>
@@ -65,6 +75,12 @@
         <img src="/storyline/icon.png" alt="">
         <span><strong>Storyline</strong><span class="sub">Storyboarding for iPhone and iPad</span></span>
       </a>
+    </li>
+    <li>
+      <div class="card soon">
+        <span class="ph" aria-hidden="true">+</span>
+        <span><strong>More apps</strong><span class="sub">Coming soon</span></span>
+      </div>
     </li>
   </ul>
   <footer><a href="mailto:sam@elswherestudios.com">sam@elswherestudios.com</a></footer>
