@@ -6,6 +6,8 @@
 <title>Storyline Storyboarding</title>
 <meta name="description" content="A storyboarding app for iPhone and iPad. Import drawings or photos, arrange them on dot-grid paper, and export a clean storyboard PDF.">
 <link rel="icon" href="icon.png">
+<!-- Safari's Smart App Banner: an Open/View strip at the top on iPhone and iPad. -->
+<meta name="apple-itunes-app" content="app-id=6809672578">
 <style>
   /* Palette taken from the app's own theme so the page and the app match. */
   :root {
@@ -52,7 +54,12 @@
   h1 { font-size: clamp(1.7rem, 5.5vw, 2.3rem); letter-spacing: -.025em; margin: 0 0 .2rem; line-height: 1.1; }
   .tag { color: var(--muted); margin: 0; font-size: 1.02rem; }
 
-  .lede { font-size: 1.12rem; margin: 0 0 2.2rem; max-width: 34rem; }
+  .lede { font-size: 1.12rem; margin: 0 0 1.4rem; max-width: 34rem; }
+
+  /* Apple's own badge artwork, unaltered. 48px tall keeps it above Apple's 40px minimum. */
+  .store { display: inline-block; margin: 0 0 2.2rem; border-radius: 8px; }
+  .store img { display: block; height: 48px; width: auto; }
+  .store:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
   video {
     width: 100%; display: block; border-radius: 12px;
@@ -98,6 +105,13 @@
   write a note under each frame, and export a storyboard PDF that carries your work and nothing
   else.</p>
 
+  <a class="store" href="https://apps.apple.com/app/id6809672578">
+    <picture>
+      <source srcset="app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+      <img src="app-store-badge-black.svg" alt="Download on the App Store">
+    </picture>
+  </a>
+
   <video controls preload="metadata" poster="poster.jpg" playsinline>
     <source src="demo.mp4" type="video/mp4">
     Your browser can&rsquo;t play this video. <a href="demo.mp4">Download it instead.</a>
@@ -116,6 +130,7 @@
 
   <h2>Links</h2>
   <ul class="links">
+    <li><a href="https://apps.apple.com/app/id6809672578"><strong>App Store</strong> <span>Storyline Storyboarding</span></a></li>
     <li><a href="support.html"><strong>Support</strong> <span>Questions, bugs, requests</span></a></li>
     <li><a href="privacy.html"><strong>Privacy Policy</strong> <span>What is collected, and what isn&rsquo;t</span></a></li>
   </ul>
